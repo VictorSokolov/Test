@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.regex.*;
 
 public class ParserSeat { // !
-    private final static HashMap<String, String> misprints = new HashMap<String, String>() {{
+    private final static HashMap<Character, Character> misprints = new HashMap<Character, Character>() {{
         put("С", "C"); put("Е", "E"); put("Т", "T"); put("Н", "H"); put("У", "Y"); put("О", "O");
         put("Р", "P"); put("Х", "X"); put("А", "A"); put("В", "B"); put("К", "K"); put("М", "M");
     }};
