@@ -1,6 +1,5 @@
 package test;
 
-
 public class ResultParser {
   private long id;
   private String sector;
