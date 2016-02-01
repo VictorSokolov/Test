@@ -19,7 +19,7 @@ public class ParserSeat { // !
              r += misprints.containsKey(c) ? misprints.get(c) : c;
          return r;
     }
-   public static String pureReplease(String word) {
+   public static String pureRepleace(String word) {
        String r = "";
          r = word.replaceAll("С", word);    r = word.replaceAll("Е", word);     r = word.replaceAll("Т", word);     r = word.replaceAll("Н", word);
          r = word.replaceAll("У", word);    r = word.replaceAll("О", word);     r = word.replaceAll("Р", word);     r = word.replaceAll("Х", word);
