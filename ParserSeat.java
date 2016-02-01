@@ -5,6 +5,8 @@ import java.util.regex.*;
 
 public class ParserSeat { // !
     private final static HashMap<Character, Character> misprints = new HashMap<Character, Character>() {{
+        // java.util.HashMap<K,V> Type Parameters: K - the type of keys maintained by this map V - the type of mapped values
+        // Получается мы русский на английский будем менять?
         put('С', 'C'); put('Е', 'E'); put('Т', 'T'); put('Н', 'H'); put('У', 'Y'); put('О', 'O');
         put('Р', 'P'); put('Х', 'X'); put('А', 'A'); put('В', 'B'); put('К', 'K'); put('М', 'M');
     }};
@@ -13,9 +15,15 @@ public class ParserSeat { // !
      
      public static String fastReplace(String word) {
          String r ="";
-         for(char c : word.toCharArray()) {
-             r = misprints.containsKey(c) ? (r + misprints.get(c)) : (r + c);             
-         }
+         for(char c : word.toCharArray())
+             r += misprints.containsKey(c) ? misprints.get(c) : c;
+         return r;
+    }
+   public static String pureReplease(String word) {
+       String r = "";
+         r = word.replaceAll("С", word);    r = word.replaceAll("Е", word);     r = word.replaceAll("Т", word);     r = word.replaceAll("Н", word);
+         r = word.replaceAll("У", word);    r = word.replaceAll("О", word);     r = word.replaceAll("Р", word);     r = word.replaceAll("Х", word);
+         r = word.replaceAll("А", word);    r = word.replaceAll("В", word);     r = word.replaceAll("К", word);     r = word.replaceAll("М", word);
          return r;
     }
    

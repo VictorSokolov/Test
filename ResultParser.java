@@ -35,6 +35,6 @@ public ResultParser(long IdRP){ id = IdRP; } // Конструктор с пар
   public String getFullRow() { return rowId != null ? toString(rowId, rowName) : ""; }
   public String getFullSeat() { return seatId != null ? toString(seatId, seatName) : ""; }
 
-  private String normStr(String str) { return str.toLowerCase(); } // Общий для всех полей вид. Лучше сразу приводить к какому-то единообразию при вводе
+  private String normStr(String str) { return str.toUpperCase(); } // Общий для всех полей вид. Лучше сразу приводить к какому-то единообразию при вводе
   private String toString(String prm, String prmNm) { return prm + " " + prmNm; }  
 }
