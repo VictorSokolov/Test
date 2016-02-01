@@ -20,10 +20,10 @@ public class ParserSeat { // !
          return r;
     }
    public static String pureRepleace(String word) {
-       String r = "";
-         r = word.replaceAll("С", word);    r = word.replaceAll("Е", word);     r = word.replaceAll("Т", word);     r = word.replaceAll("Н", word);
-         r = word.replaceAll("У", word);    r = word.replaceAll("О", word);     r = word.replaceAll("Р", word);     r = word.replaceAll("Х", word);
-         r = word.replaceAll("А", word);    r = word.replaceAll("В", word);     r = word.replaceAll("К", word);     r = word.replaceAll("М", word);
+       String r = word;
+       char[] symb = {'С', 'Е', 'Т', 'Н', 'У', 'О', 'Р', 'Х', 'А', 'В', 'К', 'М'};
+       for (Character c : symb)           
+           r = word.replaceAll(c.toString(), r);
          return r;
     }
    
